@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export function Education() {
   return (
-    <Section id="education" className="!py-12 sm:!py-16">
+    <Section id="education">
       <Container>
         <SectionHeading id="education" index="05 / Education" title="Education" />
         <div className="rounded-2xl border border-zinc-200 bg-white px-6 py-5 sm:flex sm:items-baseline sm:justify-between sm:gap-8 sm:px-8 sm:py-6">

@@ -42,6 +42,16 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    const onResize = () => {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
     if (!open) return undefined;
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(false);
@@ -99,7 +109,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-zinc-700 hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-700 hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800 md:hidden"
           aria-expanded={open}
           aria-controls={menuId}
           onClick={() => setOpen((value) => !value)}
@@ -113,13 +123,13 @@ export function Header() {
         </button>
       </Container>
 
-      <div
-        id={menuId}
-        hidden={!open}
-        className="border-t border-zinc-200 bg-zinc-50 md:hidden"
-      >
-        <nav aria-label="Mobile">
-          <ul className="flex flex-col px-5 py-3">
+      {open ? (
+        <nav
+          id={menuId}
+          aria-label="Mobile"
+          className="fixed inset-x-0 top-16 z-50 border-b border-zinc-200 bg-white shadow-sm"
+        >
+          <ul className="mx-auto flex max-w-6xl flex-col px-5 py-2">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
@@ -137,7 +147,7 @@ export function Header() {
             ))}
           </ul>
         </nav>
-      </div>
+      ) : null}
     </header>
   );
 }

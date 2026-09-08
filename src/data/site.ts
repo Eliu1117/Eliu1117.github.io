@@ -23,7 +23,11 @@ export const site = {
   linkedin: null as string | null,
   /** PLACEHOLDER: add `public/resume.pdf` and set this to "/resume.pdf" */
   resumeUrl: null as string | null,
-  siteUrl: "https://eliu1117.github.io",
+  /**
+   * Optional canonical URL override (custom domain).
+   * Leave null on Vercel — Open Graph, sitemap, and robots use the deployment URL.
+   */
+  canonicalUrl: null as string | null,
   description:
     "Ethan Liu is a Computer Science student at the University of Maryland, College Park (May 2028, GPA 3.73/4.0). He is seeking Summer 2027 software engineering and technology internships.",
 };

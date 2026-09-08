@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { site } from "@/data/site";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +14,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = getSiteUrl(site.canonicalUrl);
+
 export const metadata: Metadata = {
-  metadataBase: new URL(site.siteUrl),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${site.name} — Computer Science, University of Maryland`,
     template: `%s · ${site.name}`,
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: site.siteUrl,
+    url: siteUrl,
     siteName: `${site.name} Portfolio`,
     title: `${site.name} — Computer Science, University of Maryland`,
     description: site.description,
@@ -55,7 +58,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: site.name,
-  url: site.siteUrl,
+  url: siteUrl,
   sameAs: [site.github],
   jobTitle: "Computer Science Student",
   affiliation: {
