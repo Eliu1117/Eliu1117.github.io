@@ -59,7 +59,7 @@ export function Hero() {
                 Download Resume
               </a>
             ) : (
-              <span className="inline-flex flex-col items-start gap-1.5 sm:flex-row sm:items-center">
+              <span className="inline-flex flex-col items-start gap-1.5">
                 <span
                   aria-disabled="true"
                   title="Resume PDF placeholder — add public/resume.pdf and set resumeUrl in src/data/site.ts"

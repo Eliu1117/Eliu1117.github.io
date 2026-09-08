@@ -31,20 +31,13 @@ export function Projects() {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgb(24_24_27_/_0.04)] transition-shadow hover:shadow-md motion-safe:hover:-translate-y-0.5 motion-reduce:transition-none">
-      <div
-        className="relative flex aspect-[16/9] items-center justify-center border-b border-zinc-100 bg-[linear-gradient(135deg,_#f4fafa_0%,_#eef2f4_100%)]"
-        aria-hidden="true"
-      >
-        <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,rgb(15_118_110_/_0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgb(15_118_110_/_0.08)_1px,transparent_1px)] [background-size:22px_22px]" />
-        <div className="relative text-center">
-          <p className="font-mono text-2xl font-semibold tracking-tight text-teal-800/70">
-            {project.title
-              .split(" ")
-              .slice(0, 2)
-              .map((word) => word[0])
-              .join("")}
-          </p>
-          <Placeholder className="mt-2">screenshot not added</Placeholder>
+      <div className="relative flex aspect-[16/9] items-center justify-center border-b border-zinc-100 bg-[linear-gradient(135deg,_#f4fafa_0%,_#eef2f4_100%)]">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,rgb(15_118_110_/_0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgb(15_118_110_/_0.08)_1px,transparent_1px)] [background-size:22px_22px]"
+        />
+        <div className="relative px-4 text-center">
+          <Placeholder>screenshot not added</Placeholder>
         </div>
       </div>
       <div className="flex flex-1 flex-col p-6">
