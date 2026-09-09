@@ -59,7 +59,9 @@ const jsonLd = {
   "@type": "Person",
   name: site.name,
   url: siteUrl,
-  sameAs: [site.github],
+  email: site.email,
+  telephone: site.phoneHref.replace("tel:", ""),
+  sameAs: [site.github, site.linkedin],
   jobTitle: "Computer Science Student",
   affiliation: {
     "@type": "CollegeOrUniversity",

@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { site } from "@/data/site";
 import { Container } from "@/components/Container";
-import { Placeholder } from "@/components/Placeholder";
 import { Section } from "@/components/Section";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
@@ -26,15 +25,13 @@ export function Contact() {
             icon={<MailIcon className="h-5 w-5" />}
             label="Email"
             value={site.email}
-            href={site.email ? `mailto:${site.email}` : null}
-            placeholder="email address"
+            href={`mailto:${site.email}`}
           />
           <ContactCard
             icon={<PhoneIcon className="h-5 w-5" />}
             label="Phone"
             value={site.phone}
-            href={site.phone ? `tel:${site.phone}` : null}
-            placeholder="phone number"
+            href={site.phoneHref}
           />
           <ContactCard
             icon={<GitHubIcon className="h-5 w-5" />}
@@ -45,9 +42,8 @@ export function Contact() {
           <ContactCard
             icon={<LinkedInIcon className="h-5 w-5" />}
             label="LinkedIn"
-            value={site.linkedin}
+            value={site.linkedinLabel}
             href={site.linkedin}
-            placeholder="LinkedIn URL"
           />
         </ul>
       </Container>
@@ -60,37 +56,33 @@ function ContactCard({
   label,
   value,
   href,
-  placeholder,
 }: {
   icon: ReactNode;
   label: string;
-  value: string | null;
-  href: string | null;
-  placeholder?: string;
+  value: string;
+  href: string;
 }) {
+  const isExternal = href.startsWith("http");
+
   return (
     <li className="rounded-2xl border border-zinc-200 bg-white p-5">
       <p className="flex items-center gap-2 text-sm font-medium text-zinc-500">
         <span className="text-teal-800">{icon}</span>
         {label}
       </p>
-      {href && value ? (
-        <a
-          href={href}
-          target={href.startsWith("http") ? "_blank" : undefined}
-          rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="mt-2 inline-block text-base font-medium text-zinc-900 hover:text-teal-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
-        >
-          {value}
-          {href.startsWith("http") ? (
-            <span className="sr-only"> (opens in a new tab)</span>
-          ) : null}
-        </a>
-      ) : (
-        <p className="mt-2">
-          <Placeholder>{placeholder ?? "not added"}</Placeholder>
-        </p>
-      )}
+      <a
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        aria-label={
+          isExternal
+            ? `${label}: ${value} (opens in a new tab)`
+            : `${label}: ${value}`
+        }
+        className="mt-2 inline-block break-all text-base font-medium text-zinc-900 hover:text-teal-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+      >
+        {value}
+      </a>
     </li>
   );
 }

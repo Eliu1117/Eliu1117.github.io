@@ -49,23 +49,17 @@ After the first production deploy, you can optionally set `NEXT_PUBLIC_SITE_URL`
 
 To use a custom domain: Vercel project → **Settings → Domains**. Then set `canonicalUrl` in `src/data/site.ts` or `NEXT_PUBLIC_SITE_URL` to that domain.
 
-## Fill in placeholders
+## Remaining placeholders
 
-Contact details and a resume file were not supplied, so they are **clearly marked as placeholders** in the UI. Edit `src/data/site.ts`:
+Email, phone, LinkedIn, and GitHub are live in the site (see `src/data/site.ts`).
 
-| Field | What to set |
-| --- | --- |
-| `email` | Your email address, e.g. `"you@example.com"` |
-| `phone` | Your phone number |
-| `linkedin` | Full LinkedIn profile URL |
-| `resumeUrl` | `"/resume.pdf"` after you add the file |
-| `canonicalUrl` | Optional custom domain; leave `null` on Vercel |
+A resume PDF is not in the repo yet, so **Download Resume** stays a labeled, disabled placeholder. To enable it, add `public/resume.pdf` and set `resumeUrl` to `"/resume.pdf"` in `src/data/site.ts`.
 
-Then add your resume PDF at `public/resume.pdf`.
-
-Project screenshot files were also not supplied. Replace the labeled screenshot placeholders in `src/components/Projects.tsx` (and add images under `public/projects/`) when you have them.
+Project screenshot files were not supplied. Replace the labeled screenshot placeholders in `src/components/Projects.tsx` (and add images under `public/projects/`) when you have them.
 
 Experience dates are unknown. Set `dates` on each item in `src/data/experience.ts` when you have start/end dates.
+
+Optional custom domain: set `canonicalUrl` in `src/data/site.ts` or `NEXT_PUBLIC_SITE_URL`. Leave `canonicalUrl` as `null` on Vercel to use the deployment URL.
 
 All other copy — identity, projects, skills, experience, education — lives in `src/data/` so you can update it without touching layout code.
 

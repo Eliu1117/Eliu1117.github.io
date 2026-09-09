@@ -62,7 +62,7 @@ export function Hero() {
               <span className="inline-flex flex-col items-start gap-1.5">
                 <span
                   aria-disabled="true"
-                  title="Resume PDF placeholder — add public/resume.pdf and set resumeUrl in src/data/site.ts"
+                  title="Resume PDF not added yet"
                   className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-dashed border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-500"
                 >
                   <DownloadIcon className="h-4 w-4" />
@@ -78,30 +78,22 @@ export function Hero() {
               href={site.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile (opens in a new tab)"
               className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition-colors hover:text-teal-800 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
             >
               <GitHubIcon className="h-4 w-4" />
               GitHub
-              <span className="sr-only">(opens in a new tab)</span>
             </a>
-            {site.linkedin ? (
-              <a
-                href={site.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition-colors hover:text-teal-800 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
-              >
-                <LinkedInIcon className="h-4 w-4" />
-                LinkedIn
-                <span className="sr-only">(opens in a new tab)</span>
-              </a>
-            ) : (
-              <span className="inline-flex items-center gap-2 text-sm text-zinc-500">
-                <LinkedInIcon className="h-4 w-4" />
-                LinkedIn
-                <Placeholder>LinkedIn URL</Placeholder>
-              </span>
-            )}
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile (opens in a new tab)"
+              className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition-colors hover:text-teal-800 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+              LinkedIn
+            </a>
           </div>
         </div>
 
