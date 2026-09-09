@@ -7,6 +7,13 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
+    title: "Worship Coordinator",
+    organization: "InterVarsity Christian Fellowship/USA",
+    dates: "August 2026 – Present",
+    description:
+      "Lead weekly worship rehearsals and chapter meetings for a 120+ member campus ministry, coordinating logistics and setlists for large-scale events. Mentor 20+ worship team members and recruit and onboard new musicians year-round to grow capacity while keeping performance quality high.",
+  },
+  {
     title: "Co-Founder & Operations Director",
     organization: "CS Base @ UMD",
     dates: "November 2025 – Present · College Park, MD",

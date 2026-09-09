@@ -12,7 +12,7 @@ export function Experience() {
           id="experience"
           index="03 / Experience"
           title="Work and leadership"
-          description="Student-organization operations at Maryland and volunteer web strategy work for a community nonprofit."
+          description="Campus ministry leadership, student-organization operations at Maryland, and volunteer web strategy for a community nonprofit."
         />
         <ol className="relative space-y-0 border-l border-zinc-200 pl-6 sm:pl-8">
           {experience.map((item) => (
