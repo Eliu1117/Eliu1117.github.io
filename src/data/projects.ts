@@ -8,6 +8,7 @@ export type Project = {
   summary: string;
   contribution: string;
   tags: string[];
+  live: ProjectLink | null;
   repo: ProjectLink | null;
   repoUnavailableNote: string | null;
   screenshot: {
@@ -26,6 +27,7 @@ export const projects: Project[] = [
     contribution:
       "I contributed to the degree-audit parser that converts audit information into structured data used for recommendations.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Git"],
+    live: null,
     repo: {
       href: "https://github.com/Eliu1117/umd-course-recommender",
       label: "View repository",
@@ -53,6 +55,7 @@ export const projects: Project[] = [
       "DeviceActivity",
       "Git",
     ],
+    live: null,
     repo: {
       href: "https://github.com/Eliu1117/GroupThink",
       label: "View repository",
@@ -72,6 +75,10 @@ export const projects: Project[] = [
     contribution:
       "I cleaned and validated a 70,692-record survey extract, ran statistical tests across 21 indicators, and authored the primary analysis write-up for logistic regression and SVM models.",
     tags: ["Python", "pandas", "SciPy", "scikit-learn", "Matplotlib"],
+    live: {
+      href: "/projects/diabetes-risk",
+      label: "View report",
+    },
     repo: {
       href: "https://github.com/Eliu1117/diabetes-risk-brfss",
       label: "View repository",
