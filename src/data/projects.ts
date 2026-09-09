@@ -18,9 +18,9 @@ export const projects: Project[] = [
   {
     title: "UMD Course Recommender",
     summary:
-      "Hackathon web app that helps University of Maryland students select courses from academic requirements.",
+      "Hackathon web app that helps University of Maryland Computer Science students select courses from academic requirements, giving personalized responses based on information from their uAchieve degree audit.",
     contribution:
-      "I developed the degree-audit parser that converts audit information into structured data used for recommendations.",
+      "I contributed to the degree-audit parser that converts audit information into structured data used for recommendations.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Git"],
     repo: {
       href: "https://github.com/Eliu1117/umd-course-recommender",
@@ -32,9 +32,9 @@ export const projects: Project[] = [
   {
     title: "GroupThink",
     summary:
-      "Group-accountability iOS app that helps friends reduce distracting app usage.",
+      "Group-based study hall app that helps friends study together, blocking distracting apps in real time.",
     contribution:
-      "I built the Screen Time blocking engine, integrated Firebase Firestore, and spent significant time debugging and testing the app.",
+      "I contributed to the architecture, design, and implementation of the app, working with SwiftUI, Apple's Screen Time controls, and Firebase Firestore to deliver a polished, functional app.",
     tags: [
       "Swift",
       "iOS",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     screenshot: null,
   },
   {
-    title: "CDC/BRFSS Health Indicators Analysis",
+    title: "Diabetes Risk Prediction from CDC Health Indicators",
     summary:
       "Collaborative data science project predicting diabetes risk from CDC/BRFSS health indicators.",
     contribution:
