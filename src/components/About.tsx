@@ -20,12 +20,7 @@ export function About() {
               technological disciplines, including full-stack web and mobile
               development, data science/machine learning, and UI/UX design. I
               have a passion for contributing to projects that have a clear
-              impact and benefit for others. Whether that be designing a website
-              for Casa Chirilagua (a nonprofit serving 100+ Latino families in
-              the Alexandria/Arlington region) or implementing a degree audit
-              parser to accelerate the course selection process for UMD computer
-              science students, I am constantly looking for opportunities to use
-              my skills for good.
+              impact and benefit for others.
             </p>
             <p>
               I am always excited to participate in real-world opportunities to
