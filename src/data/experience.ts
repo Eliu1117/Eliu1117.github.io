@@ -7,22 +7,19 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    title: "Panda Express",
-    organization: "Panda Express",
-    dates: null,
+    title: "Co-Founder & Operations Director",
+    organization: "CS Base @ UMD",
+    dates: "November 2025 – Present · College Park, MD",
     description:
-      "Worked on a team of 10+ handling orders, payments, closing, cleaning, and preparation for regional inspections. The role required dependability, communication, teamwork, and consistent performance in a fast-paced environment.",
+      "Co-founded CS Base at the University of Maryland and lead day-to-day operations for the student organization, including coordinating programs, supporting members, and keeping the group running.",
   },
   {
-    title: "Assistant Soccer Coach",
-    organization: "World Class Premier FC",
-    dates: null,
+    title: "Web Strategy & Design Volunteer",
+    organization: "Casa Chirilagua & InterVarsity USA",
+    dates: "June 2026 – July 2026 · Alexandria, VA",
     description:
-      "Coached elementary-age players, running drills and supporting player development with attention to safety and equipment.",
+      "Volunteered on web strategy and design for Casa Chirilagua, a community nonprofit in Alexandria, in partnership with InterVarsity USA. Helped the organization present its programs and mission more clearly online.",
   },
 ];
 
-export const leadership: { title: string; detail?: string }[] = [
-  { title: "Soccer team captain" },
-  { title: "Clarksburg High School Ambassador" },
-];
+export const leadership: { title: string; detail?: string }[] = [];

@@ -12,7 +12,7 @@ export function Experience() {
           id="experience"
           index="03 / Experience"
           title="Work and leadership"
-          description="Roles where reliability, communication, and teaching mattered as much as getting the task done."
+          description="Student-organization operations at Maryland and volunteer web strategy work for a community nonprofit."
         />
         <ol className="relative space-y-0 border-l border-zinc-200 pl-6 sm:pl-8">
           {experience.map((item) => (
@@ -44,21 +44,23 @@ export function Experience() {
           ))}
         </ol>
 
-        <div className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8">
-          <h3 className="text-sm font-semibold tracking-tight text-zinc-900">
-            Leadership
-          </h3>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-            {leadership.map((item) => (
-              <li
-                key={item.title}
-                className="rounded-xl border border-zinc-100 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-800"
-              >
-                {item.title}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {leadership.length > 0 ? (
+          <div className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8">
+            <h3 className="text-sm font-semibold tracking-tight text-zinc-900">
+              Leadership
+            </h3>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {leadership.map((item) => (
+                <li
+                  key={item.title}
+                  className="rounded-xl border border-zinc-100 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-800"
+                >
+                  {item.title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </Container>
     </Section>
   );
