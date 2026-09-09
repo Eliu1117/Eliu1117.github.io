@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Project } from "@/data/projects";
 import { projects } from "@/data/projects";
 import { Container } from "@/components/Container";
@@ -29,16 +30,41 @@ export function Projects() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const screenshot = project.screenshot;
+  const isPortrait =
+    screenshot !== null && screenshot.height > screenshot.width;
+
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgb(24_24_27_/_0.04)] transition-shadow hover:shadow-md motion-safe:hover:-translate-y-0.5 motion-reduce:transition-none">
-      <div className="relative flex aspect-[16/9] items-center justify-center border-b border-zinc-100 bg-[linear-gradient(135deg,_#f4fafa_0%,_#eef2f4_100%)]">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,rgb(15_118_110_/_0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgb(15_118_110_/_0.08)_1px,transparent_1px)] [background-size:22px_22px]"
-        />
-        <div className="relative px-4 text-center">
-          <Placeholder>screenshot not added</Placeholder>
-        </div>
+      <div
+        className={`relative aspect-[16/9] overflow-hidden border-b border-zinc-100 ${
+          isPortrait ? "bg-[#f3efe6]" : "bg-zinc-100"
+        }`}
+      >
+        {screenshot ? (
+          <Image
+            src={screenshot.src}
+            alt={screenshot.alt}
+            width={screenshot.width}
+            height={screenshot.height}
+            className={
+              isPortrait
+                ? "mx-auto h-full w-auto object-contain"
+                : "h-full w-full object-cover object-top"
+            }
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        ) : (
+          <>
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,rgb(15_118_110_/_0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgb(15_118_110_/_0.08)_1px,transparent_1px)] [background-size:22px_22px]"
+            />
+            <div className="relative flex h-full items-center justify-center px-4 text-center">
+              <Placeholder>screenshot not added</Placeholder>
+            </div>
+          </>
+        )}
       </div>
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-lg font-semibold tracking-tight text-zinc-900">
