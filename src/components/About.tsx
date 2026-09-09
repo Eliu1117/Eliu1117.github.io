@@ -10,23 +10,29 @@ export function About() {
         <SectionHeading
           id="about"
           index="01 / About"
-          title="Building software, looking for a place to grow."
-          description={`I'm a Computer Science major at ${site.university}, graduating in ${site.graduation}. I'm based in ${site.location}.`}
+          title="Building software with real-world impact, always looking for opportunities to grow"
+          description={`I am a Computer Science Major and General Business Minor at ${site.university}, graduating in ${site.graduation}. I'm based in ${site.location}.`}
         />
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.8fr)] lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-zinc-600 sm:text-lg">
             <p>
-              I&apos;m interested in software engineering across the stack — full-stack
-              web, mobile, data science and machine learning, systems
-              programming, and technical project work. I like taking a messy
-              requirement and turning it into something people can actually use,
-              whether that is parsing a degree audit into structured
-              recommendations or building Screen Time controls into an iOS app.
+              I am interested in software engineering across a wide variety of
+              technological disciplines, including full-stack web and mobile
+              development, data science/machine learning, and UI/UX design. I
+              have a passion for contributing to projects that have a clear
+              impact and benefit for others. Whether that be designing a website
+              for Casa Chirilagua (a nonprofit serving 100+ Latino families in
+              the Alexandria/Arlington region) or implementing a degree audit
+              parser to accelerate the course selection process for UMD computer
+              science students, I am constantly looking for opportunities to use
+              my skills for good.
             </p>
             <p>
-              I&apos;m seeking {site.seeking}. I want a team where I can write
-              production code, learn from experienced engineers, and ship work
-              that is useful.
+              I am always excited to participate in real-world opportunities to
+              expand my knowledge and contribute to meaningful projects! Right
+              now, I am seeking {site.seeking} where I can gain valuable
+              experience and skills that go beyond what I have learned in the
+              classroom.
             </p>
           </div>
           <div>
