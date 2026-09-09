@@ -1,8 +1,12 @@
 # Ethan Liu — Portfolio
 
-Personal site for Ethan Liu, a Computer Science student at the University of Maryland, College Park, seeking Summer 2027 software engineering internships.
+Personal site for Ethan Liu, a Computer Science student at the University of Maryland, College Park (General Business Minor, May 2028), seeking Summer 2027 software engineering and technology internships.
 
-Built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**. **Vercel is the intended host.** This is a standard Next.js app — no static export.
+**Live site:** [eliu1117-github-io.vercel.app](https://eliu1117-github-io.vercel.app)
+
+Featured project report: [Diabetes Risk Prediction from CDC Health Indicators](https://eliu1117-github-io.vercel.app/projects/diabetes-risk)
+
+Built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**. Hosted on **Vercel**.
 
 ## Run locally
 
@@ -21,43 +25,18 @@ npm run start   # serve the production build
 npm run lint
 ```
 
-## Deploy on Vercel
+## Deploy
 
-This repository is already linked to the Vercel project **`eliu1117-github-io`**. Pushing to GitHub creates a preview; merging to `main` updates production.
+This repository is linked to the Vercel project **`eliu1117-github-io`**. Pushing to GitHub creates a preview; merging to `main` updates production.
 
-Production URL: [https://eliu1117-github-io.vercel.app](https://eliu1117-github-io.vercel.app)
+- Production: [https://eliu1117-github-io.vercel.app](https://eliu1117-github-io.vercel.app)
+- Do **not** set `output: "export"` in `next.config.ts` — this app uses the standard Next.js runtime on Vercel, not GitHub Pages static export.
 
-### Import a new project (if you ever re-link)
+Optional: set `NEXT_PUBLIC_SITE_URL` or `canonicalUrl` in `src/data/site.ts` if you add a custom domain.
 
-1. Push this repository to GitHub (`Eliu1117/Eliu1117.github.io`).
-2. Open [vercel.com/new](https://vercel.com/new) and **Import** that GitHub repo.
-3. Confirm these settings (Vercel’s Next.js preset is correct — do not switch to “Other”):
+## Content
 
-   | Setting | Value |
-   | --- | --- |
-   | Framework Preset | **Next.js** |
-   | Root Directory | `.` (repository root) |
-   | Build Command | `npm run build` |
-   | Output Directory | *leave default* (`.next` — do **not** set `out`) |
-   | Install Command | `npm install` |
-
-4. Click **Deploy**.
-
-Do **not** set `output: "export"` in `next.config.ts`. Static export is for GitHub Pages and is not used here.
-
-After the first production deploy, you can optionally set `NEXT_PUBLIC_SITE_URL` (for example `https://eliu1117-github-io.vercel.app` or a custom domain) so Open Graph tags, `sitemap.xml`, and `robots.txt` stay aligned. If it is unset, the app uses Vercel’s deployment URL automatically.
-
-To use a custom domain: Vercel project → **Settings → Domains**. Then set `canonicalUrl` in `src/data/site.ts` or `NEXT_PUBLIC_SITE_URL` to that domain.
-
-## Remaining placeholders
-
-Email, phone, LinkedIn, GitHub, and the **Download Resume** CTA are wired in the site (see `src/data/site.ts`). Resume links point to `/Ethan-Liu-Resume.pdf` (file: `public/Ethan-Liu-Resume.pdf`).
-
-Project screenshot files were not supplied. Replace the labeled screenshot placeholders in `src/components/Projects.tsx` (and add images under `public/projects/`) when you have them.
-
-Optional custom domain: set `canonicalUrl` in `src/data/site.ts` or `NEXT_PUBLIC_SITE_URL`. Leave `canonicalUrl` as `null` on Vercel to use the deployment URL.
-
-All other copy — identity, projects, skills, experience, education — lives in `src/data/` so you can update it without touching layout code.
+Site copy lives in `src/data/` (projects, skills, experience, education, contact). Resume PDF: `public/Ethan-Liu-Resume.pdf`.
 
 ## Project structure
 
@@ -67,5 +46,5 @@ src/
   components/    Layout and section UI
   data/          Projects, skills, experience, site config
   lib/           Small helpers
-public/          Static files (`Ethan-Liu-Resume.pdf`, project images)
+public/          Resume, project screenshots, hosted project reports
 ```
