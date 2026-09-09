@@ -92,7 +92,7 @@ export function Hero() {
             <Fact label="Location" value={site.location} />
             <Fact
               label="Education"
-              value={`${site.degree}, ${site.minor}, UMD · ${site.graduation}`}
+              value={`Expected ${site.graduation}`}
             />
             <Fact label="GPA" value={site.gpa} />
           </dl>
