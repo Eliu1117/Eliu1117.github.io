@@ -1,6 +1,5 @@
 import { site } from "@/data/site";
 import { Container } from "@/components/Container";
-import { Placeholder } from "@/components/Placeholder";
 import {
   ArrowDownIcon,
   DownloadIcon,
@@ -50,27 +49,14 @@ export function Hero() {
               View My Work
               <ArrowDownIcon className="h-4 w-4" />
             </a>
-            {site.resumeUrl ? (
-              <a
-                href={site.resumeUrl}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-800 transition-colors hover:border-zinc-400 hover:bg-zinc-50 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
-              >
-                <DownloadIcon className="h-4 w-4" />
-                Download Resume
-              </a>
-            ) : (
-              <span className="inline-flex flex-col items-start gap-1.5">
-                <span
-                  aria-disabled="true"
-                  title="Resume PDF placeholder — add public/resume.pdf and set resumeUrl in src/data/site.ts"
-                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-dashed border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-500"
-                >
-                  <DownloadIcon className="h-4 w-4" />
-                  Download Resume
-                </span>
-                <Placeholder>resume PDF not added</Placeholder>
-              </span>
-            )}
+            <a
+              href={site.resumeUrl}
+              download="Ethan-Liu-Resume.pdf"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-800 transition-colors hover:border-zinc-400 hover:bg-zinc-50 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+            >
+              <DownloadIcon className="h-4 w-4" />
+              Download Resume
+            </a>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -78,30 +64,22 @@ export function Hero() {
               href={site.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile (opens in a new tab)"
               className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition-colors hover:text-teal-800 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
             >
               <GitHubIcon className="h-4 w-4" />
               GitHub
-              <span className="sr-only">(opens in a new tab)</span>
             </a>
-            {site.linkedin ? (
-              <a
-                href={site.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition-colors hover:text-teal-800 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
-              >
-                <LinkedInIcon className="h-4 w-4" />
-                LinkedIn
-                <span className="sr-only">(opens in a new tab)</span>
-              </a>
-            ) : (
-              <span className="inline-flex items-center gap-2 text-sm text-zinc-500">
-                <LinkedInIcon className="h-4 w-4" />
-                LinkedIn
-                <Placeholder>LinkedIn URL</Placeholder>
-              </span>
-            )}
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile (opens in a new tab)"
+              className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition-colors hover:text-teal-800 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+              LinkedIn
+            </a>
           </div>
         </div>
 

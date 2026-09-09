@@ -14,15 +14,12 @@ export const site = {
   seeking: "Summer 2027 software engineering and technology internships",
   github: "https://github.com/Eliu1117",
   githubLabel: "Eliu1117",
-  /**
-   * PLACEHOLDERS — set these in this file before sharing with recruiters.
-   * Do not invent values. Leave as null until you have the real details.
-   */
-  email: null as string | null,
-  phone: null as string | null,
-  linkedin: null as string | null,
-  /** PLACEHOLDER: add `public/resume.pdf` and set this to "/resume.pdf" */
-  resumeUrl: null as string | null,
+  email: "ethanliu1117@gmail.com",
+  phone: "301-674-4328",
+  phoneHref: "tel:+13016744328",
+  linkedin: "https://linkedin.com/in/ethan-liu-9b900a348",
+  linkedinLabel: "linkedin.com/in/ethan-liu-9b900a348",
+  resumeUrl: "/Ethan-Liu-Resume.pdf",
   /**
    * Optional canonical URL override (custom domain).
    * Leave null on Vercel — Open Graph, sitemap, and robots use the deployment URL.
