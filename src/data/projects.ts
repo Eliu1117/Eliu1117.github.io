@@ -54,12 +54,15 @@ export const projects: Project[] = [
   {
     title: "CDC/BRFSS Health Indicators Analysis",
     summary:
-      "Collaborative data science project on public health data from CDC/BRFSS health indicators.",
+      "Collaborative data science project predicting diabetes risk from CDC/BRFSS health indicators.",
     contribution:
-      "I contributed data cleaning, exploratory data analysis, visualizations, and machine learning analysis.",
-    tags: ["Python", "pandas", "scikit-learn", "Matplotlib"],
-    repo: null,
-    repoUnavailableNote: "Public repository unavailable",
+      "I cleaned and validated a 70,692-record survey extract, ran statistical tests across 21 indicators, and authored the primary analysis write-up for logistic regression and SVM models.",
+    tags: ["Python", "pandas", "SciPy", "scikit-learn", "Matplotlib"],
+    repo: {
+      href: "https://github.com/Eliu1117/diabetes-risk-brfss",
+      label: "View repository",
+    },
+    repoUnavailableNote: null,
     screenshot: null,
   },
   {
