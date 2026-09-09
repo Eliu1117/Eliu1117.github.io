@@ -19,6 +19,13 @@ export function Footer() {
             Email
           </a>
           <a
+            href={site.resumeUrl}
+            download="Ethan-Liu-Resume.pdf"
+            className="font-medium text-zinc-700 hover:text-teal-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+          >
+            Resume
+          </a>
+          <a
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"

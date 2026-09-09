@@ -51,9 +51,7 @@ To use a custom domain: Vercel project → **Settings → Domains**. Then set `c
 
 ## Remaining placeholders
 
-Email, phone, LinkedIn, and GitHub are live in the site (see `src/data/site.ts`).
-
-A resume PDF is not in the repo yet, so **Download Resume** stays a labeled, disabled placeholder. To enable it, add `public/resume.pdf` and set `resumeUrl` to `"/resume.pdf"` in `src/data/site.ts`.
+Email, phone, LinkedIn, GitHub, and the **Download Resume** CTA are wired in the site (see `src/data/site.ts`). Resume links point to `/Ethan-Liu-Resume.pdf` (file: `public/Ethan-Liu-Resume.pdf`).
 
 Project screenshot files were not supplied. Replace the labeled screenshot placeholders in `src/components/Projects.tsx` (and add images under `public/projects/`) when you have them.
 
@@ -71,5 +69,5 @@ src/
   components/    Layout and section UI
   data/          Projects, skills, experience, site config
   lib/           Small helpers
-public/          Static files (add resume.pdf here)
+public/          Static files (`Ethan-Liu-Resume.pdf`, project images)
 ```

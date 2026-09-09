@@ -1,6 +1,5 @@
 import { site } from "@/data/site";
 import { Container } from "@/components/Container";
-import { Placeholder } from "@/components/Placeholder";
 import {
   ArrowDownIcon,
   DownloadIcon,
@@ -50,27 +49,14 @@ export function Hero() {
               View My Work
               <ArrowDownIcon className="h-4 w-4" />
             </a>
-            {site.resumeUrl ? (
-              <a
-                href={site.resumeUrl}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-800 transition-colors hover:border-zinc-400 hover:bg-zinc-50 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
-              >
-                <DownloadIcon className="h-4 w-4" />
-                Download Resume
-              </a>
-            ) : (
-              <span className="inline-flex flex-col items-start gap-1.5">
-                <span
-                  aria-disabled="true"
-                  title="Resume PDF not added yet"
-                  className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-dashed border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-500"
-                >
-                  <DownloadIcon className="h-4 w-4" />
-                  Download Resume
-                </span>
-                <Placeholder>resume PDF not added</Placeholder>
-              </span>
-            )}
+            <a
+              href={site.resumeUrl}
+              download="Ethan-Liu-Resume.pdf"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-800 transition-colors hover:border-zinc-400 hover:bg-zinc-50 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+            >
+              <DownloadIcon className="h-4 w-4" />
+              Download Resume
+            </a>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">

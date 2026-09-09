@@ -19,8 +19,7 @@ export const site = {
   phoneHref: "tel:+13016744328",
   linkedin: "https://linkedin.com/in/ethan-liu-9b900a348",
   linkedinLabel: "linkedin.com/in/ethan-liu-9b900a348",
-  /** PLACEHOLDER: add `public/resume.pdf` and set this to "/resume.pdf" */
-  resumeUrl: null as string | null,
+  resumeUrl: "/Ethan-Liu-Resume.pdf",
   /**
    * Optional canonical URL override (custom domain).
    * Leave null on Vercel — Open Graph, sitemap, and robots use the deployment URL.

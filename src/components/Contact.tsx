@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
+  DownloadIcon,
   GitHubIcon,
   LinkedInIcon,
   MailIcon,
@@ -46,6 +47,16 @@ export function Contact() {
             href={site.linkedin}
           />
         </ul>
+        <p className="mt-6">
+          <a
+            href={site.resumeUrl}
+            download="Ethan-Liu-Resume.pdf"
+            className="inline-flex items-center gap-2 text-sm font-medium text-teal-800 hover:text-teal-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+          >
+            <DownloadIcon className="h-4 w-4" />
+            Download Resume
+          </a>
+        </p>
       </Container>
     </Section>
   );
