@@ -34,6 +34,7 @@ export const interests = [
   "Full-stack development",
   "Mobile",
   "Data science & ML",
+  "UI/UX design",
   "Systems programming",
   "Technical project work",
 ] as const;
