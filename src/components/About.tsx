@@ -11,10 +11,14 @@ export function About() {
           id="about"
           index="01 / About"
           title="Building software with real-world impact, always looking for opportunities to grow"
-          description={`I am a Computer Science Major and General Business Minor at ${site.university}, graduating in ${site.graduation}. I'm based in ${site.location}.`}
         />
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.8fr)] lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-zinc-600 sm:text-lg">
+            <p>
+              I am a Computer Science Major and General Business Minor at{" "}
+              {site.university}, graduating in {site.graduation}. I&apos;m based
+              in {site.location}.
+            </p>
             <p>
               I am interested in software engineering across a wide variety of
               technological disciplines, including full-stack web and mobile
