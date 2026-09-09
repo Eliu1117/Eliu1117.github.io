@@ -62,15 +62,4 @@ export const projects: Project[] = [
     repoUnavailableNote: "Public repository unavailable",
     screenshot: null,
   },
-  {
-    title: "Systems and Programming-Language Projects",
-    summary:
-      "Academic collection of systems and programming-language work covering low-level systems, data structures, and language implementation.",
-    contribution:
-      "Projects include process management (fork, exec, pipes, and redirection), concurrency (pthreads, mutexes, and barriers), graphs, binary search trees, parsers, interpreters, type checking, automata, functional programming, and memory-safe Rust.",
-    tags: ["C", "Java", "OCaml", "Rust", "Haskell"],
-    repo: null,
-    repoUnavailableNote: "No single public repository",
-    screenshot: null,
-  },
 ];

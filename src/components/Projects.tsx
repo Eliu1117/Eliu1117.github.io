@@ -14,7 +14,7 @@ export function Projects() {
           id="projects"
           index="02 / Projects"
           title="Selected work"
-          description="Coursework, hackathon, and collaborative projects across web, iOS, data science, and systems."
+          description="Hackathon, iOS, and collaborative projects across web and data science."
         />
         <ul className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (

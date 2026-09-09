@@ -55,8 +55,6 @@ Email, phone, LinkedIn, GitHub, and the **Download Resume** CTA are wired in the
 
 Project screenshot files were not supplied. Replace the labeled screenshot placeholders in `src/components/Projects.tsx` (and add images under `public/projects/`) when you have them.
 
-Experience dates are unknown. Set `dates` on each item in `src/data/experience.ts` when you have start/end dates.
-
 Optional custom domain: set `canonicalUrl` in `src/data/site.ts` or `NEXT_PUBLIC_SITE_URL`. Leave `canonicalUrl` as `null` on Vercel to use the deployment URL.
 
 All other copy — identity, projects, skills, experience, education — lives in `src/data/` so you can update it without touching layout code.
