@@ -13,6 +13,9 @@ export const skillGroups: SkillGroup[] = [
       "JavaScript",
       "TypeScript",
       "Swift",
+      "Kotlin",
+      "SQL",
+      "Dafny",
       "OCaml",
       "Rust",
       "Haskell",
@@ -21,7 +24,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: "Web",
-    items: ["React", "Next.js", "Tailwind CSS", "REST APIs"],
+    items: ["HTML", "React", "Next.js", "Tailwind CSS", "REST APIs"],
   },
   {
     category: "Data & ML",
@@ -31,6 +34,7 @@ export const skillGroups: SkillGroup[] = [
     category: "Mobile & backend",
     items: [
       "iOS development",
+      "SwiftUI",
       "Firebase Firestore",
       "FamilyControls",
       "ManagedSettings",
@@ -39,6 +43,15 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub"],
+    items: [
+      "Git",
+      "GitHub",
+      "Cursor",
+      "VSCode",
+      "Eclipse",
+      "Jupyter Notebook",
+      "Android Studio",
+      "XCode",
+    ],
   },
 ];
