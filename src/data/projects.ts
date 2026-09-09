@@ -23,7 +23,7 @@ export const projects: Project[] = [
       "I developed the degree-audit parser that converts audit information into structured data used for recommendations.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Git"],
     repo: {
-      href: "https://github.com/JamesALin/BitCamp2026",
+      href: "https://github.com/Eliu1117/umd-course-recommender",
       label: "View repository",
     },
     repoUnavailableNote: null,
