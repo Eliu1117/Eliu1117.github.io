@@ -14,7 +14,13 @@ export function Education() {
               {education.degree}
             </h3>
             <p className="mt-1 text-sm text-zinc-600 sm:text-base">
+              {education.minor}
+            </p>
+            <p className="mt-1 text-sm text-zinc-600 sm:text-base">
               {education.school}
+            </p>
+            <p className="mt-3 text-sm font-medium text-zinc-800">
+              {education.honors}
             </p>
           </div>
           <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm sm:mt-0 sm:justify-end">

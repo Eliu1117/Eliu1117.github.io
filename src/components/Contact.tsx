@@ -19,7 +19,7 @@ export function Contact() {
           id="contact"
           index="06 / Contact"
           title="Let’s talk."
-          description="I’m currently seeking Summer 2027 software engineering and technology internships, and I’m open to collaborating on technical projects. If you’re a recruiter or you’d like to work together, I’d be glad to hear from you."
+          description="I am currently seeking Summer 2027 software engineering and technology internships, and I am open to collaborating on technical projects. If you are a recruiter or are interested in working together, I would love to connect with you!"
         />
         <ul className="grid gap-4 sm:grid-cols-2">
           <ContactCard

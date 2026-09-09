@@ -21,18 +21,18 @@ export const experience: ExperienceItem[] = [
       "Currently serving as the Worship Coordinator for the Asian American InterVarsity Chapter at UMD, where I lead weekly worship rehearsals and plan chapter meetings/events for a 120+ member campus ministry.",
   },
   {
-    title: "Student Leader | LeadXperience Cohort, Urbana 25",
-    organization: "InterVarsity Christian Fellowship/USA",
-    dates: "December 2025 – January 2026 · Phoenix, AZ",
-    description:
-      "Selected as a student leader for an international triennial conference focused on faith, leadership, and vocation, leading daily small group studies and a call to faith.",
-  },
-  {
     title: "Co-Founder & Operations Director",
     organization: "CS Base @ UMD",
     dates: "November 2025 – Present · College Park, MD",
     description:
       "Co-founded and currently working on establishing the University of Maryland Chapter of CS Base, a nonprofit providing programming classes to underserved communities.",
+  },
+  {
+    title: "Student Leader | LeadXperience Cohort, Urbana 25",
+    organization: "InterVarsity Christian Fellowship/USA",
+    dates: "December 2025 – January 2026 · Phoenix, AZ",
+    description:
+      "Selected as a student leader for an international triennial conference focused on faith, leadership, and vocation, leading daily small group studies and a call to faith.",
   },
 ];
 

@@ -11,7 +11,7 @@ export function Skills() {
           id="skills"
           index="04 / Skills"
           title="Technical skills"
-          description="Languages, frameworks, and tools I use in coursework and project work. Grouped by area — not self-scored."
+          description="Here are the languages, frameworks, and tools I use in coursework and project work. I am always looking to learn new technological skills and improve my experience!"
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (

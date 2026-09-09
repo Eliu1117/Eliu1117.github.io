@@ -2,13 +2,14 @@ export const site = {
   name: "Ethan Liu",
   initials: "EL",
   headline:
-    "Computer Science student at the University of Maryland, College Park, seeking Summer 2027 software engineering internships.",
+    "Computer Science student at the University of Maryland, College Park.",
   shortHeadline: "CS student · Aspiring software engineer",
   intro:
     "I work across full-stack web, iOS, data science, and systems programming, and I am looking for a Summer 2027 internship where I can contribute to real engineering work.",
   location: "Clarksburg, Maryland",
   university: "University of Maryland, College Park",
   degree: "B.S. Computer Science",
+  minor: "General Business Minor",
   graduation: "May 2028",
   gpa: "3.73/4.0",
   seeking: "Summer 2027 software engineering and technology internships",
