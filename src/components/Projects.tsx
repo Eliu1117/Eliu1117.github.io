@@ -33,6 +33,20 @@ function ProjectCard({ project }: { project: Project }) {
   const screenshot = project.screenshot;
   const isPortrait =
     screenshot !== null && screenshot.height > screenshot.width;
+  const screenshotImage = screenshot ? (
+    <Image
+      src={screenshot.src}
+      alt={screenshot.alt}
+      width={screenshot.width}
+      height={screenshot.height}
+      className={
+        isPortrait
+          ? "mx-auto h-full w-auto object-contain"
+          : "h-full w-full object-cover object-top"
+      }
+      sizes="(max-width: 768px) 100vw, 50vw"
+    />
+  ) : null;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgb(24_24_27_/_0.04)] transition-shadow hover:shadow-md motion-safe:hover:-translate-y-0.5 motion-reduce:transition-none">
@@ -41,19 +55,18 @@ function ProjectCard({ project }: { project: Project }) {
           isPortrait ? "bg-[#f3efe6]" : "bg-zinc-100"
         }`}
       >
-        {screenshot ? (
-          <Image
-            src={screenshot.src}
-            alt={screenshot.alt}
-            width={screenshot.width}
-            height={screenshot.height}
-            className={
-              isPortrait
-                ? "mx-auto h-full w-auto object-contain"
-                : "h-full w-full object-cover object-top"
-            }
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+        {screenshotImage ? (
+          project.live ? (
+            <a
+              href={project.live.href}
+              className="block h-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+              aria-label={`${project.live.label}: ${project.title}`}
+            >
+              {screenshotImage}
+            </a>
+          ) : (
+            screenshotImage
+          )
         ) : (
           <>
             <div
@@ -86,7 +99,16 @@ function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
-        <div className="mt-5 pt-1">
+        <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 pt-1">
+          {project.live ? (
+            <a
+              href={project.live.href}
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-800 hover:text-teal-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-800"
+            >
+              {project.live.label}
+              <ArrowUpRightIcon className="h-3.5 w-3.5" />
+            </a>
+          ) : null}
           {project.repo ? (
             <a
               href={project.repo.href}
@@ -98,7 +120,7 @@ function ProjectCard({ project }: { project: Project }) {
               <ArrowUpRightIcon className="h-3.5 w-3.5" />
               <span className="sr-only">(opens in a new tab)</span>
             </a>
-          ) : (
+          ) : project.live ? null : (
             <p className="text-sm text-zinc-500">
               {project.repoUnavailableNote}
             </p>
