@@ -2,10 +2,10 @@ export const site = {
   name: "Ethan Liu",
   initials: "EL",
   headline:
-    "Computer Science student at the University of Maryland, College Park!",
+    "Computer Science student at the University of Maryland, College Park.",
   shortHeadline: "CS student · Aspiring software engineer",
   intro:
-    "I work across full-stack web, iOS, data science, and systems programming, and I am looking for a Summer 2027 internship where I can contribute to real engineering work.",
+    "I work across full-stack web, iOS, data science, and systems programming, and I am looking for a Summer 2027 internship where I can contribute to real engineering work!",
   location: "Clarksburg, Maryland",
   university: "University of Maryland, College Park",
   degree: "B.S. Computer Science",
