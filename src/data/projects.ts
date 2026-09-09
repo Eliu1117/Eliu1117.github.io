@@ -10,8 +10,12 @@ export type Project = {
   tags: string[];
   repo: ProjectLink | null;
   repoUnavailableNote: string | null;
-  /** PLACEHOLDER until real screenshots are added to /public/projects */
-  screenshot: null;
+  screenshot: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  } | null;
 };
 
 export const projects: Project[] = [
@@ -27,7 +31,12 @@ export const projects: Project[] = [
       label: "View repository",
     },
     repoUnavailableNote: null,
-    screenshot: null,
+    screenshot: {
+      src: "/projects/umd-course-recommender.jpg",
+      alt: "UMD Computer Science Course Recommender landing page with degree audit uploader",
+      width: 1024,
+      height: 659,
+    },
   },
   {
     title: "GroupThink",
@@ -49,7 +58,12 @@ export const projects: Project[] = [
       label: "View repository",
     },
     repoUnavailableNote: null,
-    screenshot: null,
+    screenshot: {
+      src: "/projects/groupthink.jpg",
+      alt: "GroupThink Study Halls screen showing an active focus session and roster",
+      width: 473,
+      height: 1024,
+    },
   },
   {
     title: "Diabetes Risk Prediction from CDC Health Indicators",
@@ -63,6 +77,11 @@ export const projects: Project[] = [
       label: "View repository",
     },
     repoUnavailableNote: null,
-    screenshot: null,
+    screenshot: {
+      src: "/projects/diabetes-risk.jpg",
+      alt: "Horizontal bar chart of SVM feature weights for diabetes risk prediction",
+      width: 1024,
+      height: 604,
+    },
   },
 ];

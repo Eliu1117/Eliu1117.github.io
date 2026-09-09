@@ -16,7 +16,7 @@ export function About() {
           <div className="space-y-5 text-base leading-relaxed text-zinc-600 sm:text-lg">
             <p>
               I am a Computer Science Major and General Business Minor at{" "}
-              {site.university}, graduating in {site.graduation}. I&apos;m based
+              {site.university}, graduating in {site.graduation}. I am based
               in {site.location}.
             </p>
             <p>
