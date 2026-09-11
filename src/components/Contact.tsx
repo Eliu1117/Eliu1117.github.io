@@ -18,7 +18,7 @@ export function Contact() {
         <SectionHeading
           id="contact"
           index="06 / Contact"
-          title="Let’s talk."
+          title="Let’s talk!"
           description="I am currently seeking Summer 2027 software engineering and technology internships, and I am open to collaborating on technical projects. If you are a recruiter or are interested in working together, I would love to connect with you!"
         />
         <ul className="grid gap-4 sm:grid-cols-2">
