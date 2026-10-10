@@ -1,0 +1,13 @@
+body { font-family: system-ui, sans-serif; background: #f5f6f8; color: #222; margin: 0; }
+header { background: #2b3a55; padding: 1rem 2rem; }
+header a { color: #fff; font-size: 1.4rem; font-weight: 600; text-decoration: none; }
+main { max-width: 680px; margin: 2rem auto; padding: 0 1rem; }
+h2 { margin-top: 2rem; }
+.card, form { background: #fff; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.card a { color: #2b3a55; font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+.meta { color: #777; font-size: .85rem; margin: .25rem 0 0; }
+form input, form textarea { width: 100%; box-sizing: border-box; padding: .5rem; margin-bottom: .75rem; font: inherit; border: 1px solid #ccc; border-radius: 4px; }
+button { background: #2b3a55; color: #fff; border: 0; padding: .55rem 1.1rem; border-radius: 4px; font: inherit; cursor: pointer; }
+.error { color: #b00020; }
+.post-body { white-space: pre-wrap; line-height: 1.6; }
